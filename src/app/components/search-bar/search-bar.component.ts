@@ -15,11 +15,11 @@ export class SearchBarComponent {
 
     beerData: BeerData[] = [];
 
-    constructor(private apiService: ApiService) { }
-
     @ViewChild('instance', { static: true }) instance!: NgbTypeahead;
     focus$ = new Subject<string>();
     click$ = new Subject<string>();
+
+    constructor(private apiService: ApiService) { }
 
     formatter = (result: BeerData) => result.name;
 
@@ -39,7 +39,9 @@ export class SearchBarComponent {
         );
     };
 
-    // Filtros para la barra de búsqueda
+    /**
+     * Filtros para la barra de búsqueda
+     */
 
     ingredientFilter(searchTerm: string, beer: BeerData) {
         return this.nameFilter(searchTerm, beer) ||
@@ -82,6 +84,9 @@ export class SearchBarComponent {
         });
     }
 
+    /**
+     * Envía los datos de la cerveza elegida al componente beer-detail
+     */
     showBeer(event: NgbTypeaheadSelectItemEvent, input: HTMLInputElement): void {
         this.selectedBeer.emit(event.item);
         event.preventDefault();

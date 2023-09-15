@@ -2,7 +2,9 @@
     <ng-template #rt let-r="result" let-t="term">
         <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
     </ng-template>
+
     <label for="city-typeahead" class="typeahead-label">{{labelText}}</label>
+
     <div class="col-md-8 col-lg-6 col-sm-10 col-xs-12">
         <input id="city-typeahead" #cityTypeahead type="text" class="form-control" [ngbTypeahead]="search"
             [inputFormatter]="formatter" [resultTemplate]="rt" #instance="ngbTypeahead"

@@ -1,0 +1,20 @@
+<section *ngIf="!isEmpty(selectedBeer)" class="main-container">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <div class="item img-container">
+                    <img style="max-height: 500px;" loading="lazy" class="img-fluid" [src]="selectedBeer.image_url" alt="project-image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-6 mt-3 mt-lg-0">
+
+                <h2 class="col-12 col-sm-12 display-6">{{selectedBeer.name}} ({{selectedBeer.abv}}%)</h2>
+                <p class="col-12 col-sm-12 tagline-text">{{selectedBeer.tagline}}</p>
+                <p class="col-12 lead description-text">{{selectedBeer.description}}</p>
+                
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,19 @@
+.app-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 3rem 0;
+}
+
+.title-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.title-text {
+    font-size: calc(1.425rem + 2.1vw);
+    font-weight: 500;
+}

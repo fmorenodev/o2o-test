@@ -1,0 +1,9 @@
+<div class="app-container">
+    <div class="text-center title-background">
+        <div class="title-text">BeerFinder</div>
+    </div>
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <app-search-bar labelText="Type the name of a beer or an ingredient." (selectedBeer)="sendBeer($event)"></app-search-bar>
+    </div>  
+        <app-beer-detail [selectedBeer]="selectedBeer"></app-beer-detail>
+</div>

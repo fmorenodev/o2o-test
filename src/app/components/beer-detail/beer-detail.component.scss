@@ -1,0 +1,38 @@
+.main-container {
+    padding-top: 3rem;
+}
+
+.beer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.display-6 {
+    font-weight: 500;
+}
+
+.tagline-text {
+    font-style: italic;
+    font-size: 1.45rem;
+}
+
+.description-text .col-12 {
+    margin: 1rem;
+}
+
+@media (max-width: 576px) {
+    .col-12 {
+        text-align: center;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-12 {
+        text-align: start;
+    }
+}   
